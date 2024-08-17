@@ -8,7 +8,7 @@ class QueryRouter:
         max_similarity_release_notes = embedding_similarity.compute_similarity(query, self.release_notes_embeddings)
 
         if max_similarity_user_manual > max_similarity_release_notes:
-            return "Route query to User Manual and Troubleshooting Guide"
+            return "Book One"
         else:
-            return "Route query to Release Notes and Updates"
+            return "Book Two"
 

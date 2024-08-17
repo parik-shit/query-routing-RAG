@@ -1,9 +1,10 @@
-from langchain.embeddings import OllamaEmbeddings
+# from langchain.embeddings import OllamaEmbeddings
 from sklearn.metrics.pairwise import cosine_similarity
+from langchain_ollama import OllamaEmbeddings
 
 class EmbeddingSimilarity:
-    def __init__(self, model_name="llama"):
-        self.embeddings_model = OllamaEmbeddings(model_name=model_name)
+    def __init__(self, model_name="llama3.1"):
+        self.embeddings_model = OllamaEmbeddings(model=model_name)
 
     def generate_embeddings(self, text_chunks):
         return self.embeddings_model.embed_documents(text_chunks)
