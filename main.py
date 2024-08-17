@@ -24,7 +24,7 @@ def main():
     release_notes_embeddings = embedding_similarity.generate_embeddings(release_notes_chunks)
 
     # Initialize the query router
-    router = QueryRouter(user_manual_embeddings, release_notes_embeddings)
+
 
     ########################################################################
 
@@ -38,4 +38,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
