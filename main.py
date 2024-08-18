@@ -24,7 +24,7 @@ def main():
     book_two_embeddings = embedding_similarity.generate_embeddings(book_two_chunks)
 
     # Initialize the query router
-
+    
 
     ########################################################################
 
