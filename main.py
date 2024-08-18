@@ -24,9 +24,7 @@ def main():
     release_notes_embeddings = embedding_similarity.generate_embeddings(release_notes_chunks)
 
     # Initialize the query router
-
-
-    ########################################################################
+    router = QueryRouter(user_manual_embeddings, release_notes_embeddings)
 
     query1 = "What is the central premise of 'I Sell My Dreams'"
     routing_decision1 = router.route_query(query1, embedding_similarity)
@@ -38,3 +36,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
